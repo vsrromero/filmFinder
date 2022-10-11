@@ -1,4 +1,4 @@
-const tmdbKey = '';
+const tmdbKey = '73cceca44e09b2af3fafcd88615e6d6d';
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
 
@@ -61,7 +61,7 @@ const showRandomMovie = async () => {
         clearCurrentMovie();
     };
     const movies = await getMovies();
-    const randomMovie = getRandomMovie(movies);
+    const randomMovie = getRandomMovie(movies.results);
     const info = await getMovieInfo(randomMovie);
     displayMovie(info);
 };
